@@ -1,2 +1,15 @@
-<h1>A latex pdf hopefully</h1>
-<h2> End </h2>
+<form id="title-form">
+  <label>
+    Title
+    <input id="title-input" name="title" type="text"/>
+  </label>
+  <button id="title-submit">Submit</button>
+</form>
+<script>
+  const input = document.getElementById('title-input')
+  document.getElementById('title-submit').onclick = (evt) => {
+      evt.preventDefault();
+      const title = input.value;
+      window.location = './pdf/?title=' + title;
+  }
+</script>
