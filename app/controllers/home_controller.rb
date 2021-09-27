@@ -10,9 +10,6 @@ class HomeController < ApplicationController
     resume_file.close
     File.write('tmp/resume.tex', resume)
     system 'pdflatex -output-directory tmp tmp/resume.tex'
-    
-    # system 'ls'
-    # print resume
     send_file('tmp/resume.pdf', :filename => 'resume.pdf', :disposition => 'inline', :type => 'application/pdf')
   end
 end
