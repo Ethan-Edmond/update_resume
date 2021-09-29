@@ -1,10 +1,12 @@
-ResumeObj = Hash.new
+ResumeObj = { :title => 'No title found' }
 class HomeController < ApplicationController
   def index
     
   end
   def pdf
-    ResumeObj[:title] = params[:title]
+    unless params[:title] == ""
+      ResumeObj[:title] = params[:title]
+    end
     resume_file = File.open('resume_template_mine.tex.erb')
     resume = ERB.new(resume_file.read).result
     resume_file.close
