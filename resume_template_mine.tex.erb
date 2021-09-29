@@ -1,25 +1,41 @@
 \documentclass[11pt]{article}
 \usepackage{mathptmx}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[letterpaper, margin=0.5in]{geometry}
+
+%% needed for link colors
+\usepackage{xcolor}
 
 %% Import last
 \usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+urlcolor=blue,
+}
+
+\voffset=-0.25in
 
 \begin{document}
 
-\section*{\LARGE Ethan Edmond}
-<%= ResumeObj[:title] %>
+\noindent {\LARGE \textbf{Ethan Edmond}} \vspace{4pt}
 \newline
-Monument, CO (Open to relocation) | +1-719-985-0275
+\textbf{<%= ResumeObj[:title] %>}
 \newline
-\hyperlink{the sentence}{that sentence}
+Monument, CO (Open to relocation) $|$ +1-719-985-0275
+\newline
+\href{mailto:eedmond@uccs.ed}{\underline{Email}} $|$
+\href{https://github.com/Ethan-Edmond}{\underline{Github}} $|$
+\href{https://linkedin.com/ethan-edmond}{\underline{LinkedIn}} $|$
+\href{https://ethanedmond.com}{\underline{Portfolio}}
 
-\noindent\hrulefill
+\vspace{11pt}
+\noindent \textbf{TECHNICAL SKILLS}
+\vspace{-5pt}
 
-\section*{TECHNICAL SKILLS}
-\hrulefill
-\subsection*{Frontend}
-\subsection*{Backend}
+\noindent \rule{7.5in}{0.1pt} \vspace {2pt}
+
+\noindent \textbf{Frontend:} <%= ResumeObj[:frontend] %>
+
+\noindent \textbf{Backend:} <%= ResumeObj[:backend] %>
 
 
 \section*{PROJECTS}

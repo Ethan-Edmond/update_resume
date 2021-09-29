@@ -1,4 +1,6 @@
-ResumeObj = { :title => 'No title found' }
+ResumeObj = { :title => 'No title found',
+              :frontend => 'No skills found',
+              :backend => 'No skills found' }
 class HomeController < ApplicationController
   def index
     
