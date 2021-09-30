@@ -1,6 +1,14 @@
 ResumeObj = { :title => 'No title found',
-              :frontend => 'No skills found',
-              :backend => 'No skills found' }
+              :skills => {
+                :frontend => ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'LESS', 'Jest', 'React Testing Library', 'Styled Components', 'Ant Design'],
+                :backend => ['Node.js', 'Express', 'Knex', 'SQL', 'PostgreSQL', 'SQLite', 'Python', 'Supertest']
+              },
+              :projects => [],
+              :experience => [],
+              :education => []
+            }
+
+
 class HomeController < ApplicationController
   def index
     

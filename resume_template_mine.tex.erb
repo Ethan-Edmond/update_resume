@@ -33,9 +33,9 @@ Monument, CO (Open to relocation) $|$ +1-719-985-0275
 
 \rule{7.5in}{0.1pt} \vspace {2pt}
 
-\textbf{Frontend:} <%= ResumeObj[:frontend] %>
+\textbf{Frontend:} <%= ResumeObj[:skills][:frontend].join(', ') %>
 
-\textbf{Backend:} <%= ResumeObj[:backend] %>
+\textbf{Backend:} <%= ResumeObj[:skills][:backend].join(', ') %>
 
 \vspace{11pt}
 \textbf{PROJECTS}
