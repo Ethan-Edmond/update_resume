@@ -5,7 +5,7 @@ ResumeHash = { :title => 'No title found',
               },
               :projects => [{:title => 'Human Rights First - Blue Witness'}, {:title => 'Potluck Planner'}],
               :experience => [{:title => 'Window Washer', :company => 'Sparklean'}, {:title => 'Semi-Truck Driver (CDL)', :company => 'C.R. England'}],
-              :education => []
+              :education => [{:school => 'Lambda School'}, {:school => 'Pikes Peak Community College'}]
              }
 
 

@@ -60,8 +60,6 @@ Monument, CO (Open to relocation) $|$ +1-719-985-0275
 
 \rule{7.5in}{0.1pt} \vspace {2pt}
 
-\textbf{Lambda School}
-
-\textbf{Pikes Peak Community College}
+<%= ResumeHash[:education].map{ |eduxperience| "\\textbf{" + eduxperience[:school] + "}\n\n" }.join %>
 
 \end{document}
