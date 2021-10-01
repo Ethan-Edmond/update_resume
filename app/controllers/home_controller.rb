@@ -3,7 +3,7 @@ ResumeObj = { :title => 'No title found',
                 :frontend => ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'LESS', 'Jest', 'React Testing Library', 'Styled Components', 'Ant Design'],
                 :backend => ['Node.js', 'Express', 'Knex', 'SQL', 'PostgreSQL', 'SQLite', 'Python', 'Supertest']
               },
-              :projects => [],
+              :projects => [{:title => 'Human Rights First - Blue Witness'}, {:title => 'Potluck Planner'}],
               :experience => [],
               :education => []
             }
