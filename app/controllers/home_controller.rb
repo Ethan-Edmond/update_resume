@@ -1,12 +1,12 @@
-ResumeObj = { :title => 'No title found',
+ResumeHash = { :title => 'No title found',
               :skills => {
                 :frontend => ['HTML', 'CSS', 'Javascript', 'React', 'Redux', 'LESS', 'Jest', 'React Testing Library', 'Styled Components', 'Ant Design'],
                 :backend => ['Node.js', 'Express', 'Knex', 'SQL', 'PostgreSQL', 'SQLite', 'Python', 'Supertest']
               },
               :projects => [{:title => 'Human Rights First - Blue Witness'}, {:title => 'Potluck Planner'}],
-              :experience => [],
+              :experience => [{:title => 'Window Washer', :company => 'Sparklean'}, {:title => 'Semi-Truck Driver (CDL)', :company => 'C.R. England'}],
               :education => []
-            }
+             }
 
 
 class HomeController < ApplicationController
@@ -15,7 +15,7 @@ class HomeController < ApplicationController
   end
   def pdf
     unless params[:title] == ""
-      ResumeObj[:title] = params[:title]
+      ResumeHash[:title] = params[:title]
     end
     resume_file = File.open('resume_template_mine.tex.erb')
     resume = ERB.new(resume_file.read).result

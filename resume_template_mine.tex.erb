@@ -18,7 +18,7 @@ urlcolor=blue,
 
 {\LARGE \textbf{Ethan Edmond}} \vspace{4pt}
 
-\textbf{<%= ResumeObj[:title] %>}
+\textbf{<%= ResumeHash[:title] %>}
 
 Monument, CO (Open to relocation) $|$ +1-719-985-0275
 
@@ -33,9 +33,9 @@ Monument, CO (Open to relocation) $|$ +1-719-985-0275
 
 \rule{7.5in}{0.1pt} \vspace {2pt}
 
-\textbf{Frontend:} <%= ResumeObj[:skills][:frontend].join(', ') %>
+\textbf{Frontend:} <%= ResumeHash[:skills][:frontend].join(', ') %>
 
-\textbf{Backend:} <%= ResumeObj[:skills][:backend].join(', ') %>
+\textbf{Backend:} <%= ResumeHash[:skills][:backend].join(', ') %>
 
 \vspace{11pt}
 \textbf{PROJECTS}
@@ -43,9 +43,7 @@ Monument, CO (Open to relocation) $|$ +1-719-985-0275
 
 \rule{7.5in}{0.1pt} \vspace {2pt}
 
-\textbf{Human Rights First - Blue Witness}
-
-\textbf{Potluck Planner}
+<%= ResumeHash[:projects].map{ |project| "\\textbf{" + project[:title] + "}\n\n" }.join %>
 
 \vspace{11pt}
 \textbf{EXPERIENCE}
@@ -53,9 +51,8 @@ Monument, CO (Open to relocation) $|$ +1-719-985-0275
 
 \rule{7.5in}{0.1pt} \vspace {2pt}
 
-\textbf{Sparklean}
 
-\textbf{C.R. England}
+<%= ResumeHash[:experience].map{ |job| "\\textbf{" + job[:company] + "}\n\n" }.join %>
 
 \vspace{11pt}
 \textbf{EDUCATION}
