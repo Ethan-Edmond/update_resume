@@ -2,4 +2,6 @@ Rails.application.routes.draw do
   root 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get 'pdf', to: 'home#pdf'
+  get 'login', to: 'security#login'
+  get 'register', to: 'security#register'
 end
