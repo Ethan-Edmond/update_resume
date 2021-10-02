@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'pdf', to: 'home#pdf'
   get 'login', to: 'security#login'
   get 'register', to: 'security#register'
+  resources :users
 end
