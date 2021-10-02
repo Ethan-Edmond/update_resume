@@ -1,3 +1,7 @@
+<% def bold(string)
+    return "\\textbf{" + string + "}"
+  end %>
+  
 \documentclass[11pt]{article}
 \usepackage{mathptmx}
 \usepackage[letterpaper, margin=0.5in]{geometry}
@@ -16,9 +20,9 @@ urlcolor=blue,
 \setlength{\parindent}{0in}
 \begin{document}
 
-{\LARGE \textbf{Ethan Edmond}} \vspace{4pt}
+{\LARGE <%= bold('Ethan Edmond') %>} \vspace{4pt}
 
-\textbf{<%= ResumeHash[:title] %>}
+<%= bold(ResumeHash[:title]) %>
 
 Monument, CO (Open to relocation) $|$ +1-719-985-0275
 
@@ -31,7 +35,7 @@ Monument, CO (Open to relocation) $|$ +1-719-985-0275
 \textbf{TECHNICAL SKILLS}
 \vspace{-5pt}
 
-\rule{7.5in}{0.1pt} \vspace {2pt}
+\rule{7.45in}{0.1pt} \vspace {2pt}
 
 \textbf{Frontend:} <%= ResumeHash[:skills][:frontend].join(', ') %>
 
@@ -41,7 +45,7 @@ Monument, CO (Open to relocation) $|$ +1-719-985-0275
 \textbf{PROJECTS}
 \vspace{-5pt}
 
-\rule{7.5in}{0.1pt} \vspace {2pt}
+\rule{7.45in}{0.1pt} \vspace {2pt}
 
 <%= ResumeHash[:projects].map{ |project| "\\textbf{" + project[:title] + "}\n\n" }.join %>
 
@@ -49,17 +53,15 @@ Monument, CO (Open to relocation) $|$ +1-719-985-0275
 \textbf{EXPERIENCE}
 \vspace{-5pt}
 
-\rule{7.5in}{0.1pt} \vspace {2pt}
+\rule{7.45in}{0.1pt} \vspace {2pt}
 
-
-<%= ResumeHash[:experience].map{ |job| "\\textbf{" + job[:company] + "}\n\n" }.join %>
+<%= ResumeHash[:experience].map{ |job| bold(job[:company]) + "\n\n" }.join %>
 
 \vspace{11pt}
 \textbf{EDUCATION}
 \vspace{-5pt}
 
-\rule{7.5in}{0.1pt} \vspace {2pt}
+\rule{7.45in}{0.1pt} \vspace {2pt}
 
-<%= ResumeHash[:education].map{ |eduxperience| "\\textbf{" + eduxperience[:school] + "}\n\n" }.join %>
-
+<%= ResumeHash[:education].map{ |eduxperience| bold(eduxperience[:school]) + "\n\n" }.join %>
 \end{document}
